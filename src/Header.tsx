@@ -27,13 +27,14 @@ export default function Header(props: HeaderProps) {
           align="center"
           noWrap
           sx={{ flex: 1 }}
+          fontWeight="bolder"
         >
           {title}
         </Typography>
         <IconButton>
           <SearchIcon />
         </IconButton>
-        <Button variant="outlined" size="small">
+        <Button variant="contained" size="small">
           Sign up
         </Button>
       </Toolbar>
@@ -43,7 +44,20 @@ export default function Header(props: HeaderProps) {
         sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
       >
         {sections.map((section) => (
-          <Link
+          <Button 
+          key={section.title}
+          >
+            {section.title}
+          </Button>
+
+          
+        ))}
+      </Toolbar>
+    </React.Fragment>
+  );
+}
+
+{/* <Link
             color="inherit"
             noWrap
             key={section.title}
@@ -52,9 +66,4 @@ export default function Header(props: HeaderProps) {
             sx={{ p: 1, flexShrink: 0 }}
           >
             {section.title}
-          </Link>
-        ))}
-      </Toolbar>
-    </React.Fragment>
-  );
-}
+          </Link> */}
