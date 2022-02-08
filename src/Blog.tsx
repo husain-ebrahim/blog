@@ -23,11 +23,12 @@ const sections = [
   { title: 'Travel', url: '#' },
 ];
 
+
 const mainFeaturedPost = {
   title: faker.name.findName(),
   description:
     faker.lorem.paragraph(),
-  image: faker.image.city(),
+  image: faker.image.nature(),
   imageText: 'main image description',
   linkText: 'Continue reading…',
 };
@@ -53,22 +54,18 @@ const featuredPosts = [
 
 const posts = [post1, post2, post3];
 
+
 const sidebar = {
   title: 'About',
   description:
     faker.lorem.sentence(50),
   archives: [
-    { title: faker.date.month(), url: '#' },
-    { title: faker.date.month(), url: '#' },
-    { title: faker.date.month(), url: '#' },
-    { title: faker.date.month(), url: '#' },
-    { title: faker.date.month(), url: '#' },
-    { title: faker.date.month(), url: '#' },
-    { title: faker.date.month(), url: '#' },
-    { title: faker.date.month(), url: '#' },
-    { title: faker.date.month(), url: '#' },
-    { title: faker.date.month(), url: '#' },
-    { title: faker.date.month(), url: '#' },
+    { title: faker.address.country(), url: '#' },
+    { title: faker.address.country(), url: '#' },
+    { title: faker.address.country(), url: '#' },
+    { title: faker.address.country(), url: '#' },
+    { title: faker.address.country(), url: '#' },
+    { title: faker.address.country(), url: '#' },
   ]
 };
 
@@ -88,7 +85,7 @@ export default function Blog() {
             ))}
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="From the firehose" posts={posts} />
+            <Main title="All Posts" posts={posts} />
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}

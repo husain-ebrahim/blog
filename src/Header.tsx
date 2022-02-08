@@ -46,6 +46,7 @@ export default function Header(props: HeaderProps) {
         {sections.map((section) => (
           <Button 
           key={section.title}
+          href={section.url}
           >
             {section.title}
           </Button>
